@@ -1,17 +1,19 @@
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
+
 import java.util.ArrayList;
 import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         // Press Alt+Enter with your caret at the highlighted text to see how
         // IntelliJ IDEA suggests fixing it.
-        System.out.print("Hello and welcome to the flight!"+ "\n");
-        System.out.print("Selecting your movies based with 30m leeway from arrival time"+ "\n");
+        System.out.print("Hello and welcome to the flight!" + "\n");
+        System.out.print("Selecting your movies based with 30m leeway from arrival time" + "\n");
 
-        int FlightDuration=250;
-        int leeway=30;
-        FlightDuration=FlightDuration-leeway;
+        int FlightDuration = 250;
+        int leeway = 30;
+        FlightDuration = FlightDuration - leeway;
 
         List<Integer> MovieDuration = new ArrayList<>();
         MovieDuration.add(90);
@@ -29,7 +31,7 @@ public class Main {
 
     static int[] findPairOfMovies(List<Integer> MovieDuration, int FlightDuration) {
         int[] selectedPair = new int[2];
-        int maxDuration = 0;
+        int maxDuration;
         for (int i = 0; i < MovieDuration.size(); i++) {
             for (int j = i + 1; j < MovieDuration.size(); j++) {
                 int a = MovieDuration.get(i);
